@@ -20,20 +20,19 @@ namespace ReallyifsUtils
         public static bool InThisTime(bool morning = false, bool midday = false, bool afternoon = false, bool eve = false,
             bool midnight = false, bool earlyMorning = false)
         {
-            bool result = false;
             if (morning && Main.dayTime && Main.time < TimeMax / 3d)
-                result = true;
+                return true;
             if (midday && Main.dayTime && Main.time > TimeMax / 3d && Main.time < TimeMax / (2d / 3d))
-                result = true;
+                return true;
             if (afternoon && Main.dayTime && Main.time > TimeMax / (2d / 3d))
-                result = true;
+                return true;
             if (eve && !Main.dayTime && Main.time < TimeMax / 3d)
-                result = true;
+                return true;
             if (midnight && !Main.dayTime && Main.time > TimeMax / 3d && Main.time < TimeMax / (2d / 3d))
-                result = true;
+                return true;
             if (earlyMorning && !Main.dayTime && Main.time > TimeMax / (2d / 3d))
-                result = true;
-            return result;
+                return true;
+            return false;
         }
 
         public static TimeSpan FromDays(this int number) => TimeSpan.FromDays(number);

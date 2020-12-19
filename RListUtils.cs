@@ -32,14 +32,14 @@ namespace ReallyifsUtils
                 list.Insert(index + indexAdd, insertItem);
         }
 
-        public static void ContainsThenInsert<T>(this List<T> list, T findItem, int startIndex, T insertItem, int indexAdd = 0)
+        public static void ContainsThenInsert<T>(this List<T> list, T findItem, T insertItem, int startIndex, int indexAdd = 0)
         {
             int index = list.IndexOf(findItem, startIndex);
             if (index != 1)
                 list.Insert(index + indexAdd, insertItem);
         }
 
-        public static void ContainsThenInsert<T>(this List<T> list, T findItem, int startIndex, int count, T insertItem, int indexAdd = 0)
+        public static void ContainsThenInsert<T>(this List<T> list, T findItem, T insertItem, int startIndex, int count, int indexAdd = 0)
         {
             int index = list.IndexOf(findItem, startIndex, count);
             if (index != 1)

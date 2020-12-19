@@ -1,7 +1,7 @@
 ﻿author = Really'if.s.
 version = 0.1.0.0
 hideCode = true
-homepage = http://www.baidu.com
+homepage = https://jq.qq.com/?_wv=1027&k=xecC4DKL
 includePDB = true
 buildIgnore = *.csproj, *.sln, obj\*, bin\*, *.suo, *.user, .git\*, .vs\*, README.md, .gitignore
 displayName = Really'if.s. Utils（无实质Mod）

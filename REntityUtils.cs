@@ -42,7 +42,7 @@ namespace ReallyifsUtils
         }
 
         /// <summary>
-        /// 返回一个 <see cref="Item"/>，将直接调用 <see cref="Item.SetDefaults(int, bool)"/>，其 type 为 <paramref name="type"/>，noMatCheck 为 <paramref name="noMatCheck"/>
+        /// 返回一个 <see cref="Item"/>，将直接调用 <see cref="Item.SetDefaults(int, bool)"/>，其 Type 为 <paramref name="type"/>，noMatCheck 为 <paramref name="noMatCheck"/>
         /// </summary>
         /// <param name="type"></param>
         /// <param name="noMatCheck"></param>
@@ -55,7 +55,7 @@ namespace ReallyifsUtils
         }
 
         /// <summary>
-        /// 返回一个 <see cref="Projectile"/>，将直接调用 <see cref="Projectile.SetDefaults(int)"/>，其 type 为 <paramref name="type"/>
+        /// 返回一个 <see cref="Projectile"/>，将直接调用 <see cref="Projectile.SetDefaults(int)"/>，其 Type 为 <paramref name="type"/>
         /// </summary>
         /// <param name="type"></param>
         /// <returns></returns>
@@ -67,7 +67,7 @@ namespace ReallyifsUtils
         }
 
         /// <summary>
-        /// 返回一个 <see cref="NPC"/>，将直接调用 <see cref="NPC.SetDefaults(int, float)"/>，其 type 为 <paramref name="type"/>，scaleOverride 为 <paramref name="scaleOverride"/>
+        /// 返回一个 <see cref="NPC"/>，将直接调用 <see cref="NPC.SetDefaults(int, float)"/>，其 Type 为 <paramref name="type"/>，scaleOverride 为 <paramref name="scaleOverride"/>
         /// </summary>
         /// <param name="type"></param>
         /// <param name="scaleOverride"></param>

@@ -5,10 +5,8 @@ namespace ReallyifsUtils
 {
     public static class RTimeUtils
     {
-        private const double TimeMax = 54000;
-
         /// <summary>
-        /// 检查现在所在时间在以下哪个时间段，如果所有参为false则返回false
+        /// 检查现在所在时间在以下哪个时间段，如果所有参数为 <see langword="false"/> 则返回 <see langword="false"/>
         /// </summary>
         /// <param name="morning">早晨</param>
         /// <param name="midday">中午</param>
@@ -20,17 +18,17 @@ namespace ReallyifsUtils
         public static bool InThisTime(bool morning = false, bool midday = false, bool afternoon = false, bool eve = false,
             bool midnight = false, bool earlyMorning = false)
         {
-            if (morning && Main.dayTime && Main.time < TimeMax / 3d)
+            if (morning && Main.dayTime && Main.time < Main.dayLength / 3d)
                 return true;
-            if (midday && Main.dayTime && Main.time > TimeMax / 3d && Main.time < TimeMax / (2d / 3d))
+            if (midday && Main.dayTime && Main.time > Main.dayLength / 3d && Main.time < Main.dayLength * (2d / 3d))
                 return true;
-            if (afternoon && Main.dayTime && Main.time > TimeMax / (2d / 3d))
+            if (afternoon && Main.dayTime && Main.time > Main.dayLength * (2d / 3d))
                 return true;
-            if (eve && !Main.dayTime && Main.time < TimeMax / 3d)
+            if (eve && !Main.dayTime && Main.time < Main.nightLength / 3d)
                 return true;
-            if (midnight && !Main.dayTime && Main.time > TimeMax / 3d && Main.time < TimeMax / (2d / 3d))
+            if (midnight && !Main.dayTime && Main.time > Main.nightLength / 3d && Main.time < Main.nightLength * (2d / 3d))
                 return true;
-            if (earlyMorning && !Main.dayTime && Main.time > TimeMax / (2d / 3d))
+            if (earlyMorning && !Main.dayTime && Main.time > Main.nightLength * (2d / 3d))
                 return true;
             return false;
         }

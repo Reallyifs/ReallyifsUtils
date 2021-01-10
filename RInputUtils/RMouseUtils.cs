@@ -42,19 +42,16 @@ namespace ReallyifsUtils.RInputUtils
         /// <returns></returns>
         public static bool MouseClick(RMouseEnum mouse)
         {
-            switch (mouse)
-            {
-                case RMouseEnum.MouseLeft:
-                    return LeftClick();
-                case RMouseEnum.MouseMiddle:
-                    return MiddleClick();
-                case RMouseEnum.MouseRight:
-                    return RightClick();
-                case RMouseEnum.MouseX1:
-                    return XButton1Click();
-                case RMouseEnum.MouseX2:
-                    return XButton2Click();
-            }
+            if (mouse.HasFlag(RMouseEnum.MouseLeft) && LeftClick())
+                return true;
+            if (mouse.HasFlag(RMouseEnum.MouseMiddle) && MiddleClick())
+                return true;
+            if (mouse.HasFlag(RMouseEnum.MouseRight) && RightClick())
+                return true;
+            if (mouse.HasFlag(RMouseEnum.MouseX1) && XButton1Click())
+                return true;
+            if (mouse.HasFlag(RMouseEnum.MouseX2) && XButton2Click())
+                return true;
             return false;
         }
 
@@ -66,19 +63,16 @@ namespace ReallyifsUtils.RInputUtils
         /// <returns></returns>
         public static bool MouseDoubleClick(RMouseEnum mouse)
         {
-            switch (mouse)
-            {
-                case RMouseEnum.MouseLeft:
-                    return LeftDoubleClick();
-                case RMouseEnum.MouseMiddle:
-                    return MiddleDoubleClick();
-                case RMouseEnum.MouseRight:
-                    return RightDoubleClick();
-                case RMouseEnum.MouseX1:
-                    return XButton1DoubleClick();
-                case RMouseEnum.MouseX2:
-                    return XButton2DoubleClick();
-            }
+            if (mouse.HasFlag(RMouseEnum.MouseLeft) && LeftDoubleClick())
+                return true;
+            if (mouse.HasFlag(RMouseEnum.MouseMiddle) && MiddleDoubleClick())
+                return true;
+            if (mouse.HasFlag(RMouseEnum.MouseRight) && RightDoubleClick())
+                return true;
+            if (mouse.HasFlag(RMouseEnum.MouseX1) && XButton1DoubleClick())
+                return true;
+            if (mouse.HasFlag(RMouseEnum.MouseX2) && XButton2DoubleClick())
+                return true;
             return false;
         }
 
@@ -89,19 +83,16 @@ namespace ReallyifsUtils.RInputUtils
         /// <returns></returns>
         public static bool MousePressed(RMouseEnum mouse)
         {
-            switch (mouse)
-            {
-                case RMouseEnum.MouseLeft:
-                    return LeftPressed();
-                case RMouseEnum.MouseMiddle:
-                    return MiddlePressed();
-                case RMouseEnum.MouseRight:
-                    return RightPressed();
-                case RMouseEnum.MouseX1:
-                    return XButton1Pressed();
-                case RMouseEnum.MouseX2:
-                    return XButton2Pressed();
-            }
+            if (mouse.HasFlag(RMouseEnum.MouseLeft) && LeftPressed())
+                return true;
+            if (mouse.HasFlag(RMouseEnum.MouseMiddle) && MiddlePressed())
+                return true;
+            if (mouse.HasFlag(RMouseEnum.MouseRight) && RightPressed())
+                return true;
+            if (mouse.HasFlag(RMouseEnum.MouseX1) && XButton1Pressed())
+                return true;
+            if (mouse.HasFlag(RMouseEnum.MouseX2) && XButton2Pressed())
+                return true;
             return false;
         }
 
@@ -112,19 +103,16 @@ namespace ReallyifsUtils.RInputUtils
         /// <returns></returns>
         public static bool MouseReleased(RMouseEnum mouse)
         {
-            switch (mouse)
-            {
-                case RMouseEnum.MouseLeft:
-                    return LeftReleased();
-                case RMouseEnum.MouseMiddle:
-                    return MiddleReleased();
-                case RMouseEnum.MouseRight:
-                    return RightReleased();
-                case RMouseEnum.MouseX1:
-                    return XButton1Released();
-                case RMouseEnum.MouseX2:
-                    return XButton2Released();
-            }
+            if (mouse.HasFlag(RMouseEnum.MouseLeft) && LeftReleased())
+                return true;
+            if (mouse.HasFlag(RMouseEnum.MouseMiddle) && MiddleReleased())
+                return true;
+            if (mouse.HasFlag(RMouseEnum.MouseRight) && RightReleased())
+                return true;
+            if (mouse.HasFlag(RMouseEnum.MouseX1) && XButton1Released())
+                return true;
+            if (mouse.HasFlag(RMouseEnum.MouseX2) && XButton2Released())
+                return true;
             return false;
         }
 
@@ -135,19 +123,16 @@ namespace ReallyifsUtils.RInputUtils
         /// <returns></returns>
         public static bool MousePrePressed(RMouseEnum mouse)
         {
-            switch (mouse)
-            {
-                case RMouseEnum.MouseLeft:
-                    return LeftPrePressed();
-                case RMouseEnum.MouseMiddle:
-                    return MiddlePrePressed();
-                case RMouseEnum.MouseRight:
-                    return RightPrePressed();
-                case RMouseEnum.MouseX1:
-                    return XButton1PrePressed();
-                case RMouseEnum.MouseX2:
-                    return XButton2PrePressed();
-            }
+            if (mouse.HasFlag(RMouseEnum.MouseLeft) && LeftPrePressed())
+                return true;
+            if (mouse.HasFlag(RMouseEnum.MouseMiddle) && MiddlePrePressed())
+                return true;
+            if (mouse.HasFlag(RMouseEnum.MouseRight) && RightPrePressed())
+                return true;
+            if (mouse.HasFlag(RMouseEnum.MouseX1) && XButton1PrePressed())
+                return true;
+            if (mouse.HasFlag(RMouseEnum.MouseX2) && XButton2PrePressed())
+                return true;
             return false;
         }
 
@@ -158,19 +143,16 @@ namespace ReallyifsUtils.RInputUtils
         /// <returns></returns>
         public static bool MousePreReleased(RMouseEnum mouse)
         {
-            switch (mouse)
-            {
-                case RMouseEnum.MouseLeft:
-                    return LeftPreReleased();
-                case RMouseEnum.MouseMiddle:
-                    return MiddlePreReleased();
-                case RMouseEnum.MouseRight:
-                    return RightPreReleased();
-                case RMouseEnum.MouseX1:
-                    return XButton1PreReleased();
-                case RMouseEnum.MouseX2:
-                    return XButton2PreReleased();
-            }
+            if (mouse.HasFlag(RMouseEnum.MouseLeft) && LeftPreReleased())
+                return true;
+            if (mouse.HasFlag(RMouseEnum.MouseMiddle) && MiddlePreReleased())
+                return true;
+            if (mouse.HasFlag(RMouseEnum.MouseRight) && RightPreReleased())
+                return true;
+            if (mouse.HasFlag(RMouseEnum.MouseX1) && XButton1PreReleased())
+                return true;
+            if (mouse.HasFlag(RMouseEnum.MouseX2) && XButton2PreReleased())
+                return true;
             return false;
         }
         #endregion

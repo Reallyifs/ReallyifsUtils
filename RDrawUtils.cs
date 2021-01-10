@@ -35,25 +35,25 @@ namespace ReallyifsUtils
         /// <summary>
         /// 配合 <see cref="Draw(Vector2, SpriteBatch, Color, DrawVector2MouseInDelegate)"/> 使用
         /// </summary>
-        /// <param name="vector2">点</param>
+        /// <param name="position">点</param>
         /// <param name="color">颜色</param>
         /// <returns>如果不返回东西，则返回 <see langword="null"/></returns>
-        public delegate object DrawVector2MouseInDelegate(ref Vector2 vector2, ref Color color);
+        public delegate object DrawVector2MouseInDelegate(ref Vector2 position, ref Color color);
 
         /// <summary>
-        /// 调用 <see cref="SpriteBatch.Draw(Texture2D, Vector2, Rectangle?, Color, float, Vector2, float, SpriteEffects, float)"/>，其 texture 为 <see cref="Main.magicPixel"/>
+        /// 调用 <see cref="SpriteBatch.Draw(Texture2D, Vector2, Rectangle?, Color, float, Vector2, float, SpriteEffects, float)"/>，其 texture 为 <see cref="Main.magicPixel"/>，scale 为 1f，其余皆为默认值
         /// </summary>
-        /// <param name="vector2">点</param>
+        /// <param name="position">点</param>
         /// <param name="spriteBatch">sb，可用 <see cref="Main.spriteBatch"/></param>
         /// <param name="color">颜色</param>
         /// <param name="ifMouseIn">如不为 <see langword="null"/>，则在鼠标移入此点判定面积时 Invoke</param>
         /// <returns>如果 <paramref name="ifMouseIn"/> 被调用，则返回其返回的值，否则为 <see langword="null"/></returns>
-        public static object Draw(this Vector2 vector2, SpriteBatch spriteBatch, Color color, DrawVector2MouseInDelegate ifMouseIn = null)
+        public static object Draw(this Vector2 position, SpriteBatch spriteBatch, Color color, DrawVector2MouseInDelegate ifMouseIn = null)
         {
             object result = null;
-            if (RShapeUtils.GetRectangle(vector2, new Vector2(1, 1)).Contains(MousePoint) && ifMouseIn != null)
-                result = ifMouseIn(ref vector2, ref color);
-            spriteBatch.Draw(Main.magicPixel, vector2 - Main.screenPosition, null, color, 0f, Vector2.Zero, 1f, SpriteEffects.None, 0f);
+            if (RShapeUtils.GetRectangle(position, new Vector2(1, 1)).Contains(MousePoint) && ifMouseIn != null)
+                result = ifMouseIn(ref position, ref color);
+            spriteBatch.Draw(Main.magicPixel, position - Main.screenPosition, null, color, 0f, Vector2.Zero, 1f, SpriteEffects.None, 0f);
             return result;
         }
 

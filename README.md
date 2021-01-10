@@ -1,2 +1,2 @@
 # ReallyifsUtils
-Reload/?
+Reload
